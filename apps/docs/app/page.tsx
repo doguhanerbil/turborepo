@@ -1,6 +1,8 @@
 import Image, { type ImageProps } from "next/image";
 import { Button } from "@repo/ui/button";
 import styles from "./page.module.css";
+import ExampleComp from "@repo/ui/example-comp";
+import { exampleVariable } from "@repo/config";
 
 type Props = Omit<ImageProps, "src"> & {
   srcLight: string;
@@ -66,6 +68,8 @@ export default function Home() {
         <Button appName="docs" className={styles.secondary}>
           Open alert
         </Button>
+        <ExampleComp />
+        <span>{exampleVariable}</span>
       </main>
       <footer className={styles.footer}>
         <a
